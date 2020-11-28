@@ -1,2 +1,2 @@
 # Code-Snippets-Java
-List of Android topics and code snippets
+List of Java topics and their code snippets!
