@@ -145,11 +145,56 @@ switch (a) {
 ## Loops
 * **For Loop**
 ```Java
+final int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+final int[] arrCharAsciiNums = new int[]{'a', 'b', 'c', 'd', 'e', 'f'};  // this also gives ASCII nums of the chars
+final char[] arrChars = new char[]{'a', 'b', 'c', 'd', 'e', 'f'};
+final List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+final Map<Integer, String> map = new HashMap<Integer, String>();
+map.put(1, "Hithesh");
+map.put(2, "Iitesh");
+map.put(3, "Jitesh");
 
+for (int i = 0; i < arr.length; i++) {
+    System.out.print(arr[i] + " "); // 1 2 3 4 5 6 7 8 9 10
+}
+
+for (int i = 0; i <= arr.length - 1; i++) {
+	System.out.print(arr[i] + " "); // 1 2 3 4 5 6 7 8 9 10
+}
+
+for (int i = arr.length - 1; i >= 0; i--) {
+	System.out.print(arr[i] + " "); // 10 9 8 7 6 5 4 3 2 1
+}
+
+for (int i = 0; i <= arr.length - 1; i += 2) {
+	System.out.print(arr[i] + " "); // 1 3 5 7 9
+}
+
+for (int i = arr.length - 1; i >= 0; i -= 2) {
+	System.out.print(arr[i] + " "); // 10 8 6 4 2
+}
+
+for (int num : arr) {
+	System.out.print(num + " "); // 1 2 3 4 5 6 7 8 9 10
+}
+
+for (Map.Entry<Integer, String> num : map.entrySet()) {
+	System.out.print(num + " "); // 1=Hithesh 2=Iitesh 3=Jitesh
+}
+
+for (Map.Entry<Integer, String> num : map.entrySet()) {
+	System.out.print(num.getKey() + " "); // 1 2 3
+}
+
+for (Map.Entry<Integer, String> num : map.entrySet()) {
+	System.out.print(num.getValue() + " "); // Hithesh Iitesh Jitesh
+}
 ```
 * **For-Each Loop**
 ```Java
-
+for (int num : arr) {
+	System.out.print(num + " ");	// 1 2 3 4 5 6 7 8 9 10 
+}
 ```
 * **While Loop**
 ```Java
@@ -161,19 +206,59 @@ while (i < 5) {
 ```
 * **Do-While Loop**
 ```Java
-
+int i = 1;
+do {
+	System.out.print(i + " ");	// 1 2 3 4 5 6 7 8 9 10 
+	i++;
+} while (i <= 10);
 ```
 * **Break**
 ```Java
-
+for (int i = 0; i < arr.length; i++) {
+	if (i == 6) break;
+	System.out.print(i + " ");	// 0 1 2 3 4 5 
+}
 ```
 * **Continue**
 ```Java
-
+for (int i = 0; i < arr.length; i++) {
+	if (i == 2) continue;
+	if (i == 6) continue;
+	System.out.print(i + " ");	// 0 1 3 4 5 7 8 9
+}
 ```
 * **Label**
 ```Java
+Work1:
+for (int i = 0; i < 5; i++) {
+	Work2:
+	for (int j = 0; j < 6; j++) {
+		if (i == 3) continue Work1;
+		System.out.print("i=" + i + ", j=" + j + " | ");	// i=0, j=0 | i=0, j=1 | i=0, j=2 | i=0, j=3 | i=0, j=4 | i=0, j=5 | i=1, j=0 | i=1, j=1 | i=1, j=2 | i=1, j=3 | i=1, j=4 | i=1, j=5 | i=2, j=0 | i=2, j=1 | i=2, j=2 | i=2, j=3 | i=2, j=4 | i=2, j=5 | i=4, j=0 | i=4, j=1 | i=4, j=2 | i=4, j=3 | i=4, j=4 | i=4, j=5 |
+	}
+}
+```
+* **Compute Loop time**
+```Java
+final long startTime = System.nanoTime();
 
+int y = 0;
+while (y < 100) {
+    y++;
+}
+
+final long endTime = System.nanoTime();
+final long timeTaken = endTime - startTime;
+System.out.println("Time taken for this loop: " + timeTaken / 1.0E9 + " seconds"); // 48.387187825 seconds
+System.out.printf("Time to compute: %5.1f seconds.%n", timeTaken / 1.0e9); // 48.4 seconds.
+```
+* **For loop as While loop**
+```Java
+for (long x = 0; ; ) {	// for loop that acts like while loop
+    System.out.println("Iteration: " + x);
+    if (x == 100000000000L) break;
+    x++;
+}
 ```
 
 
