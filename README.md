@@ -4,18 +4,29 @@ List of Java 8 topics and their code snippets!
 
 
 ## Package definition and imports
+* **Import Class**
 ```Java
-
+import java.util.Scanner;
+```
+* **Import Package**
+```Java
+import java.util.*;
 ```
 
+
 ## Comments
+* **Single line comment**
 ```Java
 // Single line comment or End-of-line comment
-
+```
+* **Multi-line comment**
+```Java
 /* Multi-line comment
 or Inline comment 
 or Block comment */
-
+```
+* **Documentation comment**
+```Java
 /**
 * 
 * Documentation comment used for explaining code
