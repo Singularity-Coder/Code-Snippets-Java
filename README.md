@@ -170,35 +170,35 @@ for (int i = 0; i < arr.length; i++) {
 }
 
 for (int i = 0; i <= arr.length - 1; i++) {
-	System.out.print(arr[i] + " "); // 1 2 3 4 5 6 7 8 9 10
+    System.out.print(arr[i] + " "); // 1 2 3 4 5 6 7 8 9 10
 }
 
 for (int i = arr.length - 1; i >= 0; i--) {
-	System.out.print(arr[i] + " "); // 10 9 8 7 6 5 4 3 2 1
+    System.out.print(arr[i] + " "); // 10 9 8 7 6 5 4 3 2 1
 }
 
 for (int i = 0; i <= arr.length - 1; i += 2) {
-	System.out.print(arr[i] + " "); // 1 3 5 7 9
+    System.out.print(arr[i] + " "); // 1 3 5 7 9
 }
 
 for (int i = arr.length - 1; i >= 0; i -= 2) {
-	System.out.print(arr[i] + " "); // 10 8 6 4 2
+    System.out.print(arr[i] + " "); // 10 8 6 4 2
 }
 
 for (int num : arr) {
-	System.out.print(num + " "); // 1 2 3 4 5 6 7 8 9 10
+    System.out.print(num + " "); // 1 2 3 4 5 6 7 8 9 10
 }
 
 for (Map.Entry<Integer, String> num : map.entrySet()) {
-	System.out.print(num + " "); // 1=Hithesh 2=Iitesh 3=Jitesh
+    System.out.print(num + " "); // 1=Hithesh 2=Iitesh 3=Jitesh
 }
 
 for (Map.Entry<Integer, String> num : map.entrySet()) {
-	System.out.print(num.getKey() + " "); // 1 2 3
+    System.out.print(num.getKey() + " "); // 1 2 3
 }
 
 for (Map.Entry<Integer, String> num : map.entrySet()) {
-	System.out.print(num.getValue() + " "); // Hithesh Iitesh Jitesh
+    System.out.print(num.getValue() + " "); // Hithesh Iitesh Jitesh
 }
 ```
 * **For-Each Loop**
@@ -211,42 +211,42 @@ for (int num : arr) {
 ```Java
 int i = 0;
 while (i < 5) {
-  System.out.println(i);
-  i++;
+    System.out.println(i);
+    i++;
 }
 ```
 * **Do-While Loop**
 ```Java
 int i = 1;
 do {
-	System.out.print(i + " ");	// 1 2 3 4 5 6 7 8 9 10 
-	i++;
+    System.out.print(i + " ");	// 1 2 3 4 5 6 7 8 9 10 
+    i++;
 } while (i <= 10);
 ```
 * **Break**
 ```Java
 for (int i = 0; i < arr.length; i++) {
-	if (i == 6) break;
-	System.out.print(i + " ");	// 0 1 2 3 4 5 
+    if (i == 6) break;
+    System.out.print(i + " ");	// 0 1 2 3 4 5 
 }
 ```
 * **Continue**
 ```Java
 for (int i = 0; i < arr.length; i++) {
-	if (i == 2) continue;
-	if (i == 6) continue;
-	System.out.print(i + " ");	// 0 1 3 4 5 7 8 9
+    if (i == 2) continue;
+    if (i == 6) continue;
+    System.out.print(i + " ");	// 0 1 3 4 5 7 8 9
 }
 ```
 * **Label**
 ```Java
 Work1:
 for (int i = 0; i < 5; i++) {
-	Work2:
-	for (int j = 0; j < 6; j++) {
-		if (i == 3) continue Work1;
-		System.out.print("i=" + i + ", j=" + j + " | ");	// i=0, j=0 | i=0, j=1 | i=0, j=2 | i=0, j=3 | i=0, j=4 | i=0, j=5 | i=1, j=0 | i=1, j=1 | i=1, j=2 | i=1, j=3 | i=1, j=4 | i=1, j=5 | i=2, j=0 | i=2, j=1 | i=2, j=2 | i=2, j=3 | i=2, j=4 | i=2, j=5 | i=4, j=0 | i=4, j=1 | i=4, j=2 | i=4, j=3 | i=4, j=4 | i=4, j=5 |
-	}
+    Work2:
+    for (int j = 0; j < 6; j++) {
+        if (i == 3) continue Work1;
+        System.out.print("i=" + i + ", j=" + j + " | ");	// i=0, j=0 | i=0, j=1 | i=0, j=2 | i=0, j=3 | i=0, j=4 | i=0, j=5 | i=1, j=0 | i=1, j=1 | i=1, j=2 | i=1, j=3 | i=1, j=4 | i=1, j=5 | i=2, j=0 | i=2, j=1 | i=2, j=2 | i=2, j=3 | i=2, j=4 | i=2, j=5 | i=4, j=0 | i=4, j=1 | i=4, j=2 | i=4, j=3 | i=4, j=4 | i=4, j=5 |
+    }
 }
 ```
 * **Compute Loop time**
@@ -277,47 +277,47 @@ for (long x = 0; ; ) {	// for loop that acts like while loop
 * **ArrayList**
 ```Java
 // Create
- final ArrayList<String> myAnimeList = new ArrayList<String>();
- myAnimeList.add("Code Geass");
- myAnimeList.add("Death Note");
- myAnimeList.add("Eccentric Family");
- myAnimeList.add("Steins;Gate");
- myAnimeList.add("Attack On Titan");
- myAnimeList.add("Made In Abyss");
- myAnimeList.add("Dragon Ball Z");
- myAnimeList.add("Fate/Zero");
- myAnimeList.add("Ghost In The Shell");
- myAnimeList.add("One Punch Man");
- myAnimeList.add("Mobile Suit Gundam 00");
- myAnimeList.add("Monster");
- myAnimeList.add("School Rumble");
+final ArrayList<String> myAnimeList = new ArrayList<String>();
+myAnimeList.add("Code Geass");
+myAnimeList.add("Death Note");
+myAnimeList.add("Eccentric Family");
+myAnimeList.add("Steins;Gate");
+myAnimeList.add("Attack On Titan");
+myAnimeList.add("Made In Abyss");
+myAnimeList.add("Dragon Ball Z");
+myAnimeList.add("Fate/Zero");
+myAnimeList.add("Ghost In The Shell");
+myAnimeList.add("One Punch Man");
+myAnimeList.add("Mobile Suit Gundam 00");
+myAnimeList.add("Monster");
+myAnimeList.add("School Rumble");
 
- // Print
- System.out.println(myAnimeList);
+// Print
+System.out.println(myAnimeList);
 
- // Read
- myAnimeList.get(0);
- myAnimeList.size();
+// Read
+myAnimeList.get(0);
+myAnimeList.size();
 
- // Update
- myAnimeList.set(0, "Code Geass R2");
+// Update
+myAnimeList.set(0, "Code Geass R2");
 
- // Iterate
- for (int i = 0; i < myAnimeList.size(); i++) {
-     System.out.println(myAnimeList.get(i));
- }
- for (String anime : myAnimeList) {
-     System.out.println(anime);
- }
+// Iterate
+for (int i = 0; i < myAnimeList.size(); i++) {
+    System.out.println(myAnimeList.get(i));
+}
+for (String anime : myAnimeList) {
+    System.out.println(anime);
+}
 
- // Sort
- Collections.sort(myAnimeList);
+// Sort
+Collections.sort(myAnimeList);
 
- // Delete specific element
- myAnimeList.remove(6);
+// Delete specific element
+myAnimeList.remove(6);
 
- // Delete All
- myAnimeList.clear();
+// Delete All
+myAnimeList.clear();
 ```
 * **HashMap**
 ```Java
