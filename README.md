@@ -274,8 +274,98 @@ for (long x = 0; ; ) {	// for loop that acts like while loop
 
 
 ## Collections
+* **ArrayList**
 ```Java
+// Create
+ final ArrayList<String> myAnimeList = new ArrayList<String>();
+ myAnimeList.add("Code Geass");
+ myAnimeList.add("Death Note");
+ myAnimeList.add("Eccentric Family");
+ myAnimeList.add("Steins;Gate");
+ myAnimeList.add("Attack On Titan");
+ myAnimeList.add("Made In Abyss");
+ myAnimeList.add("Dragon Ball Z");
+ myAnimeList.add("Fate/Zero");
+ myAnimeList.add("Ghost In The Shell");
+ myAnimeList.add("One Punch Man");
+ myAnimeList.add("Mobile Suit Gundam 00");
+ myAnimeList.add("Monster");
+ myAnimeList.add("School Rumble");
 
+ // Print
+ System.out.println(myAnimeList);
+
+ // Read
+ myAnimeList.get(0);
+ myAnimeList.size();
+
+ // Update
+ myAnimeList.set(0, "Code Geass R2");
+
+ // Iterate
+ for (int i = 0; i < myAnimeList.size(); i++) {
+     System.out.println(myAnimeList.get(i));
+ }
+ for (String anime : myAnimeList) {
+     System.out.println(anime);
+ }
+
+ // Sort
+ Collections.sort(myAnimeList);
+
+ // Delete specific element
+ myAnimeList.remove(6);
+
+ // Delete All
+ myAnimeList.clear();
+```
+* **HashMap**
+```Java
+// Create, Update
+final HashMap<Integer, String> myAnimeList = new HashMap<Integer, String>();
+myAnimeList.put(1, "Code Geass");
+myAnimeList.put(2, "Death Note");
+myAnimeList.put(3, "Eccentric Family");
+myAnimeList.put(4, "Steins;Gate");
+myAnimeList.put(5, "Attack On Titan");
+
+// Print
+System.out.println(myAnimeList);
+
+// Read
+myAnimeList.get(1); // get by key
+myAnimeList.size();
+
+// Iterate
+for (Map.Entry<Integer, String> animeSet : myAnimeList.entrySet()) {
+    System.out.println(animeSet.getKey() + " " + animeSet.getValue());
+}
+
+// Iterate For-each
+myAnimeList.forEach((key, value) -> System.out.println(key + " = " + value));
+
+// Iterate with Iterator
+final Iterator<Map.Entry<Integer, String>> it = myAnimeList.entrySet().iterator();
+while (it.hasNext()) {
+    Map.Entry<Integer, String> set = (Map.Entry<Integer, String>) it.next();
+    System.out.println(set.getKey() + " = " + set.getValue());
+}
+
+// Iterate over Keys
+for (Integer animeRank : myAnimeList.keySet()) {
+    System.out.println(animeRank);
+}
+
+// Iterate over Values
+for (String anime : myAnimeList.values()) {
+    System.out.println(anime);
+}
+
+// Delete specific element
+myAnimeList.remove(5);  // Remove by key
+
+// Delete All
+myAnimeList.clear();
 ```
 
 
