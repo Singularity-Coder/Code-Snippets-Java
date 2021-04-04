@@ -53,7 +53,7 @@ Float myFloat = 5.99F;
 Double myDouble = 2.55;
 Character myChar = 'S';
 Boolean myBool = true;
-String myString = "Hello World!"
+String myString = "Hello World!";
 ```
 
 
