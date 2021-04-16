@@ -89,7 +89,7 @@ static String profession = "Android Developer";
 ```
 * **Assignment Operators**
 ```Java
-int a = 6;
+final int a = 6;
 a = 5;
 a += 3;
 a -= 1;
@@ -104,7 +104,7 @@ a <<= 5;
 ```
 * **Comparison Operators**
 ```Java
-int a = 6, b = 2;
+final int a = 6, b = 2;
 a == b
 a != b
 a > b
@@ -114,7 +114,7 @@ a <= b
 ```
 * **Logical Operators**
 ```Java
-int a = 6, b = 2;
+final int a = 6, b = 2;
 a < 5 && b > 4
 a < 5 || b > 4 
 !(a < 5 && b > 4)
@@ -124,7 +124,7 @@ a < 5 || b > 4
 ## Conditionals
 * **If, else and else if statements**
 ```Java
-int a = 6, b = 2;
+final int a = 6, b = 2;
 if (a > 3 && b > 1) {
     System.out.println("Allowed");
 } else if (a == 3 || b > 1) {
@@ -135,7 +135,7 @@ if (a > 3 && b > 1) {
 ```
 * **Ternary Operator**
 ```Java
-String result = (a > 3 && b > 1) ? "Allowed" : "Not Allowed";
+final String result = (a > 3 && b > 1) ? "Allowed" : "Not Allowed";
 ```
 * **switch statements**
 ```Java
@@ -204,7 +204,7 @@ for (Map.Entry<Integer, String> num : map.entrySet()) {
 * **For-Each Loop**
 ```Java
 for (int num : arr) {
-	System.out.print(num + " ");	// 1 2 3 4 5 6 7 8 9 10 
+    System.out.print(num + " ");	// 1 2 3 4 5 6 7 8 9 10 
 }
 ```
 * **While Loop**
@@ -367,6 +367,49 @@ myAnimeList.remove(5);  // Remove by key
 // Delete All
 myAnimeList.clear();
 ```
+
+
+## Bitwise Operations
+* **What is binary:** 
+* what is decimal 3 in binary? 32 bit int java. - 000...011
+* what is decimal 6 in binary
+* Bitwise operations can be performed on any of the integral types - integral types (char, short, int, etc)
+* **How is a decimal value like a number represented in binary in Java:** Java Integer is 32 bit. So the value of say 4 in binary is 00000...0100.
+* **Binary to Decimal Conversion:** Binary numeral system: 1 is ON and 0 is OFF. 0s don't matter. 1s only matter so add the 2^placeValue values. So 1001011 is 75 in binary. Read from right to left.
+```
+Binary Number:             1     0     0     1     0     1     1
+Place Value:               6     5     4     3     2     1     0
+2 power Place Value:       2^6   2^5   2^4   2^3   2^2   2^1   2^0
+Solve the above:           64    32    16    8     4     2     1
+
+Add the 1 bit values:      64 + 8 + 2 + 1 = 75
+```
+* Also notice that each time we add another binary digit we double the possible values.
+```
+Number of Digits     Formula     Settings
+3                    2^3         8
+4                    2^4         16
+5                    2^5         32
+6                    2^6         64
+```
+* **binary operator:** needs 2 operands
+* **Unary operator:** single operand
+* **Signed**
+* **Unsigned**
+* **one’s complement**
+* **2’s complement**
+* Bitwise AND (&): Binary operator. returns bit by bit AND of i/p values. if both bits 1 then gives 1 else 0
+* Bitwise OR (|): Binary operator. returns bit by bit OR of i/p values. if either bits is 1 then 1 else 0.
+* Bitwise XOR (^): Binary operator. return bit by bit XOR of i/p values. if both bits same then 0 else 1
+* Bitwise NOT (\~): Unary operator. returns 1s complement representation of i/p values. all bits inverted. every 0 to 1 n every 1 to 0.
+* Shift Operators: They shift bits of nums left or right thereby multiplying or dividing the num by 2. They can be used when we have to multiply or divide a number by two. Ex: 6 >> 3. This can be read as "shift the binary digits of the decimal value 6 by 3 positions to the right". 6 in binary is 000...0110 and shifting 3 positions to the right means?
+* Signed Right Shift (>>): Right shifting is division by 2.
+* Unsigned Right Shift (>>>):
+* Signed Left Shift (<<): Left shifting is multiply by 2. this means shift the binary value of 6 left by 5 positions.
+* Unsigned Left Shift (<<):
+* Logical (<<) and arithmetic left-shift (<<<) operations are same in java.
+* * On Mac you have this wonderful Programmer Calculator. Open ```Calculator > View > Programmer``` or Cmd + 3. You can perform all your bitwise operations here.
+![alt text](https://github.com/Singularity-Coder/Code-Snippets-Java/blob/main/assets/programmer_calc.png)
 
 
 ## Classes
