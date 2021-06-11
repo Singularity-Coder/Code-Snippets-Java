@@ -367,6 +367,30 @@ myAnimeList.remove(5);  // Remove by key
 // Delete All
 myAnimeList.clear();
 ```
+* **Queue**
+    * Queue = FIFO data structure. First-In, First-Out. A collection designed to holding elements prior to processing. Linear Data Structure
+    * Enqueue = offer() - add an element to the end of the queue
+    * Dequeue = poll() - remove an element from the start of the queue
+    * Used in Keyboard Buffer - letters should appear on the screen in the order they are pressed
+    * Used in Printer Queue - print jobs should be completed in order
+    * Used in LinkedLists, Priority Queues, Breadth-First Search
+```Java
+final Queue<String> queue = new LinkedList<String>();
+
+// Create or Add
+queue.offer("Hithesh");
+queue.offer("Iithesh");
+queue.offer("Jithesh");
+queue.offer("Kithesh");
+
+queue.poll(); // deletes the topmost element from queue
+
+final String latestPerson = queue.peek();   // read but dont write or modify
+
+System.out.println(queue.size());
+System.out.println(queue.isEmpty());
+System.out.println(queue.contains("Hithesh"));
+```
 
 
 ## Bitwise Operations
@@ -408,7 +432,7 @@ Number of Digits     Formula     Settings
 * Signed Left Shift (<<): Left shifting is multiply by 2. this means shift the binary value of 6 left by 5 positions.
 * Unsigned Left Shift (<<):
 * Logical (<<) and arithmetic left-shift (<<<) operations are same in java.
-* * On Mac you have this wonderful Programmer Calculator. Open ```Calculator > View > Programmer``` or Cmd + 3. You can perform all your bitwise operations here.
+* On Mac you have this wonderful Programmer Calculator. Open ```Calculator > View > Programmer``` or Cmd + 3. You can perform all your bitwise operations here.
 ![alt text](https://github.com/Singularity-Coder/Code-Snippets-Java/blob/main/assets/programmer_calc.png)
 
 
